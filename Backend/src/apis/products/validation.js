@@ -6,9 +6,8 @@ import createHttpError from "http-errors"
 const productSchema = {
   name: {
     in: ["body"],
-    isString: {
-      errorMessage: "Name is a mandatory field and needs to be a string!",
-    },
+    errorMessage: "Name is a mandatory field and needs to be a string!",
+    isString: true,
   },
   description: {
     in: ["body"],

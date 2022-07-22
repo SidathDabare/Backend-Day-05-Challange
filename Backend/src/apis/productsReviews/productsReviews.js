@@ -62,7 +62,7 @@ productReviewRouter.put("/reviews/:id", async (req, res, next) => {
   try {
     const review = await getProductsReviews()
 
-    const index = review.findIndex((book) => book._id === req.params.id)
+    const index = review.findIndex((review) => review._id === req.params.id)
     if (index !== -1) {
       const oldReview = review[index]
 

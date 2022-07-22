@@ -68,10 +68,14 @@ const ReviewsCompnents = ({ product_Id }) => {
       <ListGroup>
         {reviews && reviews.length > 0 ? (
           reviews.map((review, i) => (
-            <ListGroup.Item key={i}>
+            <ListGroup.Item key={i} className='d-flex justify-content-between'>
               {" "}
               <span>{review.comment}</span>
-              <span></span>
+              <span>
+                <i
+                  className='bi bi-x-square-fill'
+                  onClick={() => console.log("Delete")}></i>
+              </span>
             </ListGroup.Item>
           ))
         ) : (

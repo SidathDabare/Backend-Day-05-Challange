@@ -1,0 +1,107 @@
+[
+  {
+    "category": "A Novel",
+    "title": "Remarkably Bright Creatures",
+    "cover": "https://m.media-amazon.com/images/I/51fMaH1tRyL._SY346_.jpg",
+    "readTime": { "value": 2, "unit": "minute" },
+    "author": {
+      "name": "Shelby Van Pelt",
+      "avatar": "https://m.media-amazon.com/images/S/amzn-author-media-prod/es9svp4acmpnklj8vf4nlh0a6e._SY600_.jpg"
+    },
+    "content": "HTML",
+    "createdAt": "2022-07-20T13:42:24.686Z",
+    "id": "lbtwb54l5tnm7xq"
+  },
+  {
+    "category": "Computer Science",
+    "title": "A Craftsman's Guide to Software Structure and Design",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/41-sN-mzwKL._SX381_BO1,204,203,200_.jpg",
+    "readTime": { "value": 2, "unit": "minute" },
+    "author": {
+      "name": "Kevin Henney",
+      "avatar": "https://m.media-amazon.com/images/S/amzn-author-media-prod/i51purv5l7vdkegafub3gscf6g._SY600_.jpg"
+    },
+    "content": "HTML",
+    "createdAt": "2022-07-20T13:49:22.033Z",
+    "id": "lbtwb54l5tnv5yp"
+  },
+  {
+    "category": "Programming",
+    "title": "A Handbook of Agile Software Craftsmanship",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/41xShlnTZTL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+    "readTime": { "value": 2, "unit": "minute" },
+    "author": {
+      "name": "Dean Wampler",
+      "avatar": "https://m.media-amazon.com/images/S/amzn-author-media-prod/lrm8m9dc7up3us2sklal8lhnem._SY600_.jpg"
+    },
+    "content": "HTML",
+    "createdAt": "2022-07-20T13:50:40.392Z",
+    "id": "lbtwb54l5tnwufc"
+  },
+  {
+    "category": "Programming",
+    "title": "Head First Design Patterns",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/51rmlxN57sL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+    "readTime": { "value": 2, "unit": "minute" },
+    "author": {
+      "name": "Eric Freeman",
+      "avatar": "https://m.media-amazon.com/images/I/811zfTU4RoL._SY600_.jpg"
+    },
+    "content": "HTML",
+    "createdAt": "2022-07-20T13:52:06.379Z",
+    "id": "lbtwb54l5tnyorv"
+  },
+  {
+    "category": "Music",
+    "title": "This Is Your Brain on Music: The Science of a Human Obsession",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/41k80gBjN9L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+    "readTime": { "value": 2, "unit": "minute" },
+    "author": {
+      "name": "Daniel Leviten",
+      "avatar": "https://m.media-amazon.com/images/I/91WByBMMIBL._SY600_.jpg"
+    },
+    "content": "HTML",
+    "createdAt": "2022-07-20T13:53:47.939Z",
+    "id": "lbtwb54l5to0v4z"
+  },
+  {
+    "category": "Music",
+    "title": "The Organized Mind: Thinking Straight in the Age of Information",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/41CgLelWZtL._SX330_BO1,204,203,200_.jpg",
+    "readTime": { "value": 2, "unit": "minute" },
+    "author": {
+      "name": "Daniel Leviten",
+      "avatar": "https://m.media-amazon.com/images/I/91WByBMMIBL._SY600_.jpg"
+    },
+    "content": "HTML",
+    "createdAt": "2022-07-20T14:34:54.800Z",
+    "id": "lbtwb4sl5tphqkw"
+  },
+  {
+    "category": "Computer Science",
+    "title": "Windows Internals: System architecture, processes, threads, memory management, and more, Part 1 (Developer Reference)",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/518PiAoW60L._SX401_BO1,204,203,200_.jpg",
+    "readTime": { "value": 2, "unit": "minute" },
+    "author": {
+      "name": "Kevin Henney",
+      "avatar": "https://m.media-amazon.com/images/I/61Q1QRXDnRL._SY600_.jpg"
+    },
+    "content": "HTML",
+    "createdAt": "2022-07-20T13:40:22.513Z",
+    "id": "lbtwb54l5tnjlo1",
+    "updatedAt": "2022-07-20T18:15:44.997Z"
+  },
+  {
+    "category": "Programming",
+    "title": "Programming Windows®, Fifth Edition (Microsoft Programming Series)",
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/512gMw5LwzL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+    "readTime": { "value": 2, "unit": "minute" },
+    "author": {
+      "name": "Charles Petzold",
+      "avatar": "https://m.media-amazon.com/images/I/611DoYTkWbL._SY600_.jpg"
+    },
+    "content": "Look it up in Petzold” remains the decisive last word in answering questions about Windows development. And in PROGRAMMING WINDOWS, FIFTH EDITION, the esteemed Windows Pioneer Award winner revises his classic text with authoritative coverage of the latest versions of the Windows operating system—once again drilling down to the essential API heart of Win32 programming. Topics include",
+    "createdAt": "2022-07-20T18:13:17.415Z",
+    "id": "lbtw11wl5txakmg"
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Jhon",
+    "surname": "Doe",
+    "email": "example@gmail.com",
+    "datw of birth": "22-03-2000",
+    "avatar": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+    "createdAt": "2022-07-19T14:47:53.927Z",
+    "id": "lbtw97sl5sail3c"
+  },
+  {
+    "name": "Jane",
+    "surname": "Doe",
+    "email": "jane@gmail.com",
+    "datw of birth": "22-03-2000",
+    "avatar": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+    "createdAt": "2022-07-19T14:49:12.649Z",
+    "id": "lbtw97sl5sak9u1"
+  },
+  {
+    "name": "person1",
+    "surname": "Doe",
+    "email": "jane@gmail.com",
+    "datw of birth": "22-03-2000",
+    "avatar": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+    "createdAt": "2022-07-19T14:56:02.766Z",
+    "id": "lbtw88sl5sat2a8"
+  },
+  {
+    "name": "person2",
+    "surname": "Doe",
+    "email": "jane@gmail.com",
+    "datw of birth": "22-03-2000",
+    "avatar": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+    "createdAt": "2022-07-19T14:56:07.990Z",
+    "id": "lbtw88sl5sat6ba"
+  },
+  {
+    "name": "person3",
+    "surname": "Doe",
+    "email": "jane@gmail.com",
+    "datw of birth": "22-03-2000",
+    "avatar": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+    "createdAt": "2022-07-19T14:56:14.030Z",
+    "id": "lbtw88sl5sataz2"
+  },
+  {
+    "name": "person3",
+    "surname": "Doe",
+    "email": "jane@gmail.com",
+    "datw of birth": "22-03-2000",
+    "avatar": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+    "createdAt": "2022-07-19T14:56:44.348Z",
+    "id": "lbtwatcl5satyd9"
+  },
+  {
+    "name": "person10",
+    "surname": "Doe",
+    "email": "vdsvdsvcd@gmail.com",
+    "datw of birth": "22-03-2000",
+    "avatar": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
+    "createdAt": "2022-07-19T15:44:10.686Z",
+    "id": "lbtwat0l5sciym7"
+  },
+  {
+    "category": "ARTICLE CATEGORY",
+    "title": "ARTICLE TITLE",
+    "cover": "https://m.media-amazon.com/images/I/51fMaH1tRyL._SY346_.jpg",
+    "readTime": { "value": 2, "unit": "minute" },
+    "author": {
+      "name": "Shelby Van Pelt",
+      "avatar": "https://m.media-amazon.com/images/S/amzn-author-media-prod/es9svp4acmpnklj8vf4nlh0a6e._SY600_.jpg"
+    },
+    "content": "HTML",
+    "createdAt": "2022-07-20T13:40:02.102Z",
+    "id": "lbtwb54l5tnj5x3"
+  }
+]

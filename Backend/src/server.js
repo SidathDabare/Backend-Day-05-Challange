@@ -4,8 +4,7 @@ import express from "express"
 import listEndpoints from "express-list-endpoints"
 import cors from "cors"
 import { join } from "path"
-import authorsRouter from "./apis/authors/index.js"
-import postsRouter from "./apis/blogPosts/index.js"
+
 import {
   badRequestHandler,
   notFoundHandler,
@@ -13,6 +12,8 @@ import {
   genericServerErrorHandler,
 } from "./errorHandlers.js"
 import filesRouter from "./apis/files/index.js"
+import productRouter from "./apis/products/index.js"
+import productReviewRouter from "./apis/productsReviews/productsReviews.js"
 
 const server = express()
 const port = 3001
@@ -36,9 +37,8 @@ server.use(cors()) // If you want to connect FE to this BE you must use cors mid
 server.use(loggerMiddleware) // GLOBAL MIDDLEWARE
 server.use(express.json()) // GLOBAL MIDDLEWARE If you don't add this line BEFORE the endpoints all requests'bodies will be UNDEFINED
 
-// server.use(express.json())
-server.use("/authors", authorsRouter)
-server.use("/posts", loggerMiddleware, postsRouter)
+server.use("/products", loggerMiddleware, productRouter)
+server.use("/products", loggerMiddleware, productReviewRouter)
 server.use("/file", filesRouter)
 
 server.use(badRequestHandler)

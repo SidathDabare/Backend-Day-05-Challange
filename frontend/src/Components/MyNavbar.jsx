@@ -92,7 +92,7 @@ const MyNavbar = () => {
     // console.log(file.name)
   }, [type, file])
   return (
-    <Navbar bg='dark' variant='dark'>
+    <Navbar bg='dark fixed-top' variant='dark'>
       <Container>
         <h2>
           <Link to='/'>Shop</Link>

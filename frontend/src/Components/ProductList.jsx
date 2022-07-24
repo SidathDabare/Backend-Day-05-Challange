@@ -26,7 +26,9 @@ const ProductList = () => {
     //console.log(posts)
   }, [])
   return (
-    <Container className='mt-4 d-flex flex-wrap justify-content-between'>
+    <Container
+      className='d-flex flex-wrap justify-content-between'
+      style={{ marginTop: "5rem" }}>
       {products.map((product, i) => (
         <SingleProduct key={i} product={product} />
       ))}

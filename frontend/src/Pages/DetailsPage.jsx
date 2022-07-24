@@ -71,15 +71,15 @@ const DetailsPage = () => {
 
   useEffect(() => {
     setProducts(location.state.productItem)
-  }, [])
+  }, [location.state.productItem])
   return (
     <div>
       <MyNavbar />
-      <Container className='d-flex col-12 mt-3'>
+      <Container className='d-flex col-12' style={{ marginTop: "6rem" }}>
         <Card className='d-flex col-6'>
           <Card.Img
             variant='top'
-            className='product-details-img'
+            className='product-details-img pt-3'
             src={products.imageUrl}
           />
 

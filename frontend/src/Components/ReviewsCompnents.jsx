@@ -2,34 +2,20 @@
 
 import React, { useEffect, useState } from "react"
 
-import ListGroup from "react-bootstrap/ListGroup"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"
+import SindleReview from "./SindleReview"
 
 const ReviewsCompnents = ({ product_Id }) => {
-  //const [products, setProducts] = useState({})
-  const [reviews, setReviews] = useState([])
   const [comment, setComment] = useState("")
   const [rate, setRate] = useState("")
-  const [productId, setProductId] = useState("")
 
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
-  const getReviews = async () => {
-    let url = `http://localhost:3001/products/reviews/${product_Id}`
-    try {
-      let res = await fetch(url)
-      let data = await res.json()
-      //console.log(data)
-      return data
-    } catch (error) {
-      console.log(error)
-    }
-  }
   const addReviews = async () => {
     let url = `http://localhost:3001/products/reviews`
     try {
@@ -54,26 +40,31 @@ const ReviewsCompnents = ({ product_Id }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     addReviews()
+    handleClose()
   }
 
   useEffect(() => {
     //setProducts(location.state.productItem)
-    getReviews().then((review) => {
-      //console.log(review)
-      setReviews(review)
-    })
+    // getReviews().then((review) => {
+    //   //console.log(review)
+    //   setReviews(review)
+    // })
   }, [product_Id])
   return (
     <>
-      <ListGroup>
+      <SindleReview productId={product_Id} />
+      {/* <ListGroup>
         {reviews && reviews.length > 0 ? (
           reviews.map((review, i) => (
             <ListGroup.Item key={i} className='d-flex justify-content-between'>
               {" "}
-              <span>{review.comment}</span>
-              <span>
+              <span className='col-9'>{review.comment}</span>
+              <span className='col-3 d-flex justify-content-end'>
                 <i
-                  className='bi bi-x-square-fill'
+                  className='bi bi-pencil-square mx-2'
+                  onClick={() => console.log("Edit")}></i>
+                <i
+                  className='bi bi-x-square-fill text-danger'
                   onClick={() => console.log("Delete")}></i>
               </span>
             </ListGroup.Item>
@@ -81,7 +72,7 @@ const ReviewsCompnents = ({ product_Id }) => {
         ) : (
           <ListGroup.Item>No review</ListGroup.Item>
         )}
-      </ListGroup>
+      </ListGroup> */}
       <Button variant='primary' onClick={handleShow}>
         + Add Your Feedback
       </Button>

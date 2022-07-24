@@ -16,13 +16,27 @@ const SingleProduct = ({ product }) => {
     setProductItem(product)
   }, [product])
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant='top' src={productItem.imageUrl} />
+    <Card style={{ width: "18rem", height: "35rem", marginBottom: "2rem" }}>
+      <Card.Img
+        variant='top'
+        className='product-details-img pt-3'
+        src={productItem.imageUrl}
+      />
       <Card.Body>
-        <Card.Title>{productItem.name}</Card.Title>
+        <Card.Title style={{ width: "100%", height: "2rem" }}>
+          {productItem.name}
+        </Card.Title>
         <Card.Title>{productItem.brand}</Card.Title>
         <Card.Text>{productItem.category}</Card.Text>
-        <Card.Text>{productItem.description}</Card.Text>
+        <Card.Text
+          style={{
+            width: "100%",
+            height: "7rem",
+            overflow: "hidden",
+            textOverflow: "clip",
+          }}>
+          {productItem.description}
+        </Card.Text>
         <h3>$ {productItem.price}</h3>
         <Button
           onClick={() => {

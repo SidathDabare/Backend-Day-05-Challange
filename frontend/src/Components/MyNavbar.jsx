@@ -1,6 +1,7 @@
 /** @format */
 
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"
@@ -11,9 +12,12 @@ import { useEffect } from "react"
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false)
+
   const [name, setName] = useState("")
   const [brand, setBrand] = useState("")
-  const [image, setImage] = useState("")
+  const [type, setType] = useState(null)
+  const [file, setFile] = useState(null)
+
   const [price, setPrice] = useState("")
   const [category, setCategory] = useState("")
   const [description, setDescription] = useState("")
@@ -29,7 +33,10 @@ const MyNavbar = () => {
         body: JSON.stringify({
           name: name,
           brand: brand,
-          imageUrl: image,
+          imageUrl:
+            type === "url"
+              ? file
+              : `http://localhost:3001/file/products/${file.name}`,
           price: price,
           category: category,
           description: description,
@@ -46,18 +53,51 @@ const MyNavbar = () => {
     }
   }
 
+  const addImage = async (files) => {
+    let url = `http://localhost:3001/file/products/${name}`
+    var formData = new FormData()
+    formData.append("image", files)
+    // formData.append("test", "StringValueTest")
+
+    var requestOptions = {
+      method: "POST",
+      body: formData,
+      // headers: {
+      //   "Content-Type": "multipart/form-data",
+      // },
+    }
+
+    try {
+      let res = await fetch(url, requestOptions)
+      let data = await res.json()
+      console.log(data)
+      return data
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   const handleSubmit = (e) => {
-    e.preventDefault()
+    setName()
     addProduct()
+    if (type === "computer") {
+      addImage(file)
+    }
+
+    handleClose()
+    e.preventDefault()
   }
 
   useEffect(() => {
-    //console.log(name)
-  }, [])
+    // console.log(file.name)
+  }, [type, file])
   return (
     <Navbar bg='dark' variant='dark'>
       <Container>
-        <Navbar.Brand href='#home'>Shop</Navbar.Brand>
+        <h2>
+          <Link to='/'>Shop</Link>
+        </h2>
+
         <Button variant='primary' onClick={handleShow}>
           + Add New Product
         </Button>
@@ -71,7 +111,7 @@ const MyNavbar = () => {
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form encType='multipart/form-data'>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
               <Form.Control
                 type='text'
@@ -85,24 +125,51 @@ const MyNavbar = () => {
                 className='my-1'
                 onChange={(e) => setBrand(e.target.value)}
               />
-              <Form.Control
-                type='text'
-                placeholder='Image Url'
-                className='my-1'
-                onChange={(e) => setImage(e.target.value)}
-              />
+              <div className='d-flex col-6'>
+                <Form.Select
+                  className='col-3'
+                  aria-label='Default select example'
+                  onChange={(e) => setType(e.target.value)}>
+                  <option>Image</option>
+                  <option value='url'>Url</option>
+                  <option value='computer'>From your computer</option>
+                </Form.Select>
+                {type === "url" ? (
+                  <Form.Control
+                    type='text'
+                    placeholder='Image Url'
+                    className='my-1 col-7'
+                    onChange={(e) => setFile(e.target.value)}
+                  />
+                ) : (
+                  <Form.Control
+                    type='file'
+                    placeholder='Image file'
+                    className='my-1 col-7'
+                    name='image'
+                    onChange={(e) => setFile(e.target.files[0])}
+                    //onChange={setImage}
+                  />
+                )}
+              </div>
+
               <Form.Control
                 type='text'
                 placeholder='Price'
                 className='my-1'
                 onChange={(e) => setPrice(e.target.value)}
               />
-              <Form.Control
+              <Form.Select
+                aria-label='Default select example'
                 type='text'
                 placeholder='Category'
                 className='my-1'
-                onChange={(e) => setCategory(e.target.value)}
-              />
+                onChange={(e) => setCategory(e.target.value)}>
+                <option>Open this select menu</option>
+                <option value='Electronics'>Electronics</option>
+                <option value='2'>Two</option>
+                <option value='3'>Three</option>
+              </Form.Select>
               <Form.Control
                 as='textarea'
                 rows={3}

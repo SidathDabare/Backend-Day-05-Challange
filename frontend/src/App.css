@@ -1,3 +1,5 @@
+/** @format */
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+.product-details-img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
 }

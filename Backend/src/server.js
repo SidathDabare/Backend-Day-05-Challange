@@ -16,7 +16,7 @@ import productRouter from "./apis/products/index.js"
 import productReviewRouter from "./apis/productsReviews/productsReviews.js"
 
 const server = express()
-const port = 3001
+const port = process.env.PORT
 const publicFolderPath = join(process.cwd(), "./public")
 
 const loggerMiddleware = (req, res, next) => {
